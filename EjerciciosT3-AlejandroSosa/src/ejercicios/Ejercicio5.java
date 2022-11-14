@@ -22,13 +22,13 @@ public class Ejercicio5 {
 			 for (int i = 2; i <= a;) {
 				 // Si el resto de dividir num entre i es igual a cero asignamos a la variable primo el valor true.
 				 if (a % i == 0) {
+					 a/=i;
+					 mcm*=i;
+				 }else {
 					 if(b % i == 0) {
-						 a/=i;
 						 b/=i;
 						 mcm*=i;
-					 }
-				 }else {
-					 i++;
+					 }else i++;
 				 }
 			 }
 		}else {
@@ -36,16 +36,16 @@ public class Ejercicio5 {
 			 * Recorremos el bucle mientras que el valor de i sea menor a num a la vez que el valor de i va aumentando.
 			 * En este bucle for el valor inicial de i será 2.
 			 */
-			for (int i = 2; i <= b;) {
+			for (int i = 2; i <= a;) {
 				 // Si el resto de dividir num entre i es igual a cero asignamos a la variable primo el valor true.
-				 if (b % i == 0) {
-					 if(a % i == 0) {
-						 a/=i;
+				 if (a % i == 0) {
+					 a/=i;
+					 mcm*=i;
+				 }else {
+					 if(b % i == 0) {
 						 b/=i;
 						 mcm*=i;
-					 }
-				 }else {
-					 i++;
+					 }else i++;
 				 }
 			 }
 		}
